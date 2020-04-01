@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class ArrayFifteen {
@@ -8,7 +6,7 @@ public class ArrayFifteen {
 
         Scanner scan = new Scanner(System.in);
         int[] array = new int[15];
-        Arrays.fill(array, 0);
+        Arrays.fill(array, -1);
         do {
             int value = scan.nextInt() % 15;
             int index = value;
@@ -17,7 +15,7 @@ public class ArrayFifteen {
 
             try {
                 while (!done) {
-                    if (array[index] == 0) {
+                    if (array[index] == -1) {
                         array[index] = value;
                         done = true;
                     } else {
@@ -32,6 +30,7 @@ public class ArrayFifteen {
                 System.out.println(e.getMessage());
                 break;
             }
+            System.out.println(Arrays.toString(array));
         } while (!scan.nextLine().equals("exit"));
 
     }
