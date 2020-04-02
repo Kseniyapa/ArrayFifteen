@@ -6,6 +6,7 @@ public class ArrayFifteen {
 
         Scanner scan = new Scanner(System.in);
         int[] array = new int[15];
+        //fill in -1, because we can get 0
         Arrays.fill(array, -1);
         do {
             int value = scan.nextInt() % 15;
@@ -15,6 +16,7 @@ public class ArrayFifteen {
 
             try {
                 while (!done) {
+                    //fill in -1, because we can get 0
                     if (array[index] == -1) {
                         array[index] = value;
                         done = true;
